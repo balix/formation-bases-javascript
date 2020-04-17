@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les boucles</title>
+	</head>
+	<body>
+		<h1>Les boucles</h1>
+
+		<script type="text/javascript">
+
+			// 1. Créez une variable counter égale à 0
+ 			var counter = 0;
+
+			// 2. Créez une variable counterLimit égale à la valeur de votre choix
+			var counterLimit = 10;
+
+			// 3. Incrémentez la variable counter tant qu'elle est inférieure à counterLimit et affichez sa valeur à chaque incrémentation
+			while (counter < counterLimit){
+			    console.log("Valeur de compteur est : ", counter);
+			    counter++;
+			}
+
+			// 4. Créez une variable counter2 égale à 100
+			var counter2 = 100;
+
+			// 5. Créez une variable counterLimit2 égale à 10
+			var counterLimit2 = 10;
+
+			// 6. Affichez et incrémenter la variable counter2 tant qu'elle est inférieure à counterLimit2
+			do {
+			    counter++;
+			    console.log("Valeur de compteur 2 est : " + counter2);
+			}
+			while (counter2 < counterLimit2);
+
+
+			// 7. Créez une variable counter3 égale à 0
+			var counter3 = 0;
+
+			// 8. Créez une variable counterLimit3 égale à 10
+			var counterLimit3 = 10;
+
+			// 9. Créez une boucle qui va incrémenter et afficher counter3 si sa valeur est inférieure à counterLimit3
+			for(counter3; counter3 < counterLimit3; counter3++){
+				console.log("Valeur de compteur 3 est : " + counter3);
+			}
+
+			// 10. Créez un tableau de données "myColors" contenant vos couleurs préférées
+			myColors = ['Blue', 'Green', 'Yellow', 'Purple'];
+			console.log("Mes couleurs préférées :", myColors);
+
+			// 11. Parcourez et affichez toutes les entrées du tableau "myColors"
+			for (var i = 0; i < myColors.length; i++) {
+				console.log("Nom de la couleur :", myColors[i]);
+			}
+
+			// 12. Créez un objet myCar contenant les propriétés "brand", "model", "year"
+			var myCar = {
+				brand : "Renault",
+				model : "Clio",
+				year : 2011
+			}
+
+			console.log("Objet myCar :", myCar);
+
+			// 13. Parcourez et affichez le nom et les valeurs de toutes les propriétés de l'objet myCar
+			for (var prop in myCar){
+				console.log(prop + " : " + myCar[prop]);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les variable et les types</title>
+	</head>
+	<body>
+		<h1>Les variable et les types</h1>
+
+		<script type="text/javascript">
+			// 1. Créez une variable myCivility de type UNDEFINED
+			var myCivility;
+			console.log(myCivility);
+
+			// 2. Créez une variable myName de type STRING
+			var myName = "Benoit";
+			console.log(myName);
+
+			// 3. Créez une variable myAge de type NUMBER
+			var myAge = 37;
+			console.log(myAge);
+
+			// 4. Créez une variable married de type BOOLEAN
+			var married = true;
+			console.log(married);
+
+			// 5. Créez une variable myColors de type ARRAY avec vos couleurs préférées
+			var myColors = ['red', 'yellow', 'blue', 'green'];
+			console.log(myColors);
+
+			// 6. Créez une variable myPerson de type OBJECT avec les variables précédemment créées
+			var myPerson = {
+				name: "Benoit",
+				age: 37,
+				married: true,
+				colors: myColors
+			}
+			console.log(myPerson);
+
+			// 7. Affichez le type de myName
+			console.log(typeof myName);
+
+			// 8. Affichez le type de myAge
+			console.log(typeof myAge);
+
+			// 9. Affichez le type de married
+			console.log(typeof married);
+
+			// 10. Affichez le type de myColors
+			console.log(typeof myColors);
+
+			// 11. Affichez le type de myPerson
+			console.log(typeof myPerson);
+
+			// 12. Affichez le type de myCivility
+			console.log(typeof myCivility);
+		</script>
+	</body>
+</html>

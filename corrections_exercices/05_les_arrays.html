@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les arrays</title>
+	</head>
+	<body>
+		<h1>Les arrays</h1>
+
+		<script type="text/javascript">
+			// 1. Créez un tableau myPerson contenant votre nom, notre âge et si vous êtes marié ou non
+			var myPerson = ["Benoit Alix", 37, false];
+			console.log("Tableau myPerson :", myPerson);
+
+			// 2. Créez un tableau multidirectionnel myColleagues contenant un tableau par personne avec le nom de l'âge de la personne de cette formation
+			var myColleagues = [["Ricardo Da Costa", 34], ["Cédric Beau", 42], ["Romain Cuillerier", 34]];
+			console.log("Tableau de mes collègues :", myColleagues);
+
+			// 3. Créez une variable myPersonName contenant le premier élément du tableau myPerson précédemment créé et affichez son contenu
+			var myPersonName = myPerson[0];
+			console.log("Mon nom :", myPersonName);
+
+			// 4. Modifiez la deuxième donnée du tableau myPerson par la valeur de votre choix
+			myPerson[1] = 25;
+			console.log("Mon nouvel âge est :", myPerson[1]);
+
+			// 5. Affichez l'âge de la première personne déclarée dans myColleagues
+			console.log("Age de mon premier collègue :", myColleagues[0][1]);
+
+			// 6. Créez une liste de shopping myShoppingList avec une liste de 5 articles
+			var myShoppingList = ['Pain', 'Oranges', 'Coca-Cola', 'Yaourt', 'Riz'];
+			console.log(myShoppingList);
+
+			// 7. Supprimez le dernier article de votre liste à l'aide la méthode pop()
+			myShoppingList.pop();
+			console.log(myShoppingList);
+
+			// 8. Ajoutez un article à la fin de votre liste à l'aide de la méthode push()
+			myShoppingList.push('Patates');
+			console.log(myShoppingList);
+
+			// 9. Supprimez le premier article de votre liste à l'aide de la méthode shift()
+			myShoppingList.shift();
+			console.log(myShoppingList);
+
+			// 10. Ajoutez un article au début de votre liste à l'aide la méthode unshift()
+			myShoppingList.unshift('Brocolis');
+			console.log(myShoppingList);
+		</script>
+	</body>
+</html>

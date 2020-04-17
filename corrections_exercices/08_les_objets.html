@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les objets</title>
+	</head>
+	<body>
+		<h1>Les objets</h1>
+
+		<script type="text/javascript">
+			// 1. Créez un objet myPerson contenant les propriétés "name", "job", "age" avec new Object()
+
+			var myPerson = new Object();
+
+			myPerson.name = "Benoit Alix";
+			myPerson.job = "Front-end developer";
+			myPerson.age = 37;
+
+			console.log("myPerson 1 :", myPerson);
+
+			// 2. Déclinez l'objet myPerson en utilisant cette fois-ci la notation littérale
+
+			var myPerson2 = {
+				name : "Benoit Alix",
+				job : "Front-end developer",
+				age : 37
+			}
+
+			console.log("myPerson 2 :", myPerson2);
+
+			// 3. Affichez la propriété name de myPerson avec la dot notation
+			console.log("Nom de myPerson :", myPerson.name);
+
+			// 4. Affichez la propriété age de myPerson avec la bracket notation 
+			console.log("Age de myPerson :", myPerson['age']);
+
+			// 5. Modifiez la propriété job de myPerson puis affichez la avec la méthode de votre choix
+			myPerson.job = "Web developer";
+			console.log("Nouveau job de myPerson :", myPerson.job);
+
+			// 6. Ajoutez une nouvelle propriété "civility" à myPerson avec la valeur "male" ou "female"
+			myPerson.civility = "Male";
+			console.log("Civilité de myPerson :", myPerson.civility);
+
+			// 7. Ajoutez une fonction "getIdentity" à l'objet myPerson qui affichera : "Mon nom est personne" puis appelez la
+			var myPerson3 = {
+				name : "Benoit Alix",
+				job : "Front-end developer",
+				age : 37,
+				getIdentity : function(){
+					console.log('Mon nom est personne');
+				}
+			}
+
+			myPerson3.getIdentity();
+
+			// 8. Modifiez l'instruction de la fonction "getIdentity" de façon à afficher : "Bonjour, mon nom est name, je suis job et j'ai age ans"
+			var myPerson4 = {
+				name : "Benoit Alix",
+				job : "Front-end developer",
+				age : 37,
+				getIdentity : function(){
+					console.log("Bonjour, mon nom est " + this.name + ", je suis " + this.job + " et j'ai " + this.age + " ans");
+				}
+			}
+
+			myPerson4.getIdentity();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les strings</title>
+	</head>
+	<body>
+		<h1>Les strings</h1>
+
+		<script type="text/javascript">
+			// 1. Créez une variable myQuote contenant la chaine : 'Il a dit : "j'apprend Javascript"' en utilisant des simple quote
+			var myQuote = 'Il a dit : "J\'apprend Javascript".';
+			console.log(myQuote);
+
+			// 2. Modifiez myQuote à l'aide de double quote
+			myQuote = "Il a dit : \"J'apprend Javascript\".";
+			console.log(myQuote);
+
+			// 3. Créez une variable myLink contenant la chaîne suivante : <a href="http://www.example.com" target="_blank"></a>
+			var myLink = '<a href="http://www.example.com" target="_blank"></a>'
+			myLink = "<a href=\"http://www.example.com\" target=\"_blank\"></a>"
+			console.log(myLink);
+
+			// 4. Créez une variable myString1 contenant "guerre", une variable myString2 contenant "paix" et concaténer le tout de façon à obtenir "Guerre et paix"
+			var myString1 = "guerre";
+			var myString2 = "paix";
+			console.log(myString1 + " et " + myString2);
+
+			// 5. Créez une variable myAge contenant votre âge puis une variable myString3 contenant : "mon âge est de : myAge ans"
+			var myAge = 37;
+			var myString3 = "Mon âge est de : " + myAge + " ans";
+			console.log(myString3);
+
+			// 6. Créez une variable myString 4 et ajoutez-y la phrase "et je me porte bien" à la chaine myString3
+			var myString4 = myString3 + " et je me porte bien";
+			console.log(myString4);
+
+			// 7. Créez une variable myName et attribuez lui votre nom
+			var myName = "Benoit";
+			console.log("Myname :", myName);
+
+			// 8. Créez une variable nameLength et attribuez lui la longueur de myName
+			var nameLength = myName.length;
+			console.log("Longueur de mon nom :", nameLength);
+
+			// 9. Affichez "Mon nom est composé de nameLength lettres"
+			console.log("Mon nom est composé de " + nameLength + " lettres");
+
+			// 10. Créez une variable nameFirstLetter et attribuez lui le premier caractère de la variable myName
+			var nameFirstLetter = myName[0];
+			console.log("Première lettre de mon nom :", nameFirstLetter);
+
+			// 11. Créez une variable nameThirdLetter et attribuez lui le troisième caractère de la variable myName
+			var nameThirdLetter = myName[2];
+			console.log(nameThirdLetter);
+
+			// 12. Affichez : "la première lettre de mon nom est : nameFirstLetter et la troisième lettre de mon nom est : nameThirdLetter"
+			console.log("La première lettre de mon nom est : " + nameFirstLetter + " et la troisième lettre de mon nom est " + nameThirdLetter);
+
+			// 13. Créez une variable nameLastLetter et attribuez lui le dernier caractère de la variable myName
+			var nameLastLetter = myName[nameLength - 1];
+			console.log("Dernière lettre de mon nom :", nameLastLetter);
+
+			// 14. Demandez son prénom à l'utilisateur et stockez la réponse dans une variable myFirstName
+			var myFirstName = prompt('Entrez votre prénom :');
+
+			// 15. Demandez son nom à l'utilisateur et stockez la réponse dans une variable myLastName
+			var myLastName = prompt('Entrez votre nom :');
+
+			// 16. Créez une variable myFullName composée de myFirstName et myLastName
+			var myFullName = myFirstName + " " + myLastName;
+			console.log(myFullName);
+
+			// 17. Récupérez et affichez uniquement le prénom de la variable myFullName en utilisant la méthode slice()
+			console.log(myFullName.slice(0, 6));
+
+			// 18. Récupérez et affichez uniquement le nom de la variable myFullName en utilisant la méthode slice()
+			console.log(myFullName.slice(-4));
+
+			// 19. Créez une variable url contenant "http://example.com/page.html#anchor"
+			var url = 'http://www.example.com/page.html#anchor';
+    		
+			// 20. Récupérez et affichez uniquement le nom de l'ancre
+    		console.log(url.split('#')[1]);
+		</script>
+	</body>
+</html>

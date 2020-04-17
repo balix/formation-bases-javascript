@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ma carte d'identité</title>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body, html {
+				padding: 0;
+				margin: 0;
+				background-color: #f1f2f3;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				width: 100vw;
+				align-items: center;
+				justify-content: center;
+			}
+
+			h1 {
+				font-weight: bold;
+				color: #516e8c;
+			}
+
+			button.card-generator-btn {
+				display: inline-flex;
+				padding: 16px 40px;
+				border:  0 none;
+				font-size: 16px;
+				line-height: 1.4;
+				font-weight: medium;
+				background-color: #516e8c;
+				color:  white;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Ma carte d'identité</h1>
+
+			<div id="identity-card" class="identity-card"></div>
+
+			<button id="card-generator-btn" class="card-generator-btn">
+				Générer ma carte d'identité
+			</button>
+		</div>
+
+		<script type="text/javascript">
+			/*
+			/*	Global variables
+			*/
+			var labels = [
+				"Prénom",
+				"Nom",
+				"Date de naissance",
+				"Lieu de naissance"
+			];
+			var	questions = [
+				"Quel est votre prénom ?",
+				"Quel est votre nom ?",
+				"Quel est votre date de naissance ?",
+				"Quel est le lieu où vous êtes néé ?"
+			];
+			var answers = [];
+			var card = $('#identity-card');
+			var btn = $('#card-generator-btn');
+
+			/*
+			/*	Button handler
+			*/
+			$('#card-generator-btn').on('click', function(event){
+				event.preventDefault();
+				getAnswers();
+			});
+
+			/*
+			/*	Ask questions to user and stock answers in array
+			*/
+			var getAnswers = function(){
+				for(question = 0; question < questions.length; question++){
+					var cardEntry = {};
+					var answer = prompt(questions[question]);
+					var label = labels[question];
+					
+					// Build answers array
+					cardEntry[label] = answer;
+					answers.push(cardEntry);
+				}
+
+				generateCard();
+			};
+
+			/*
+			/*	Generate the card with answers array
+			*/
+			var generateCard = function(){
+				var cardEntries = "";
+
+				// Loop on answers array
+				for(answer = 0; answer < answers.length; answer++){
+					var entries = answers[answer];
+
+					// Loop on object inside answer
+					for(var entry in entries){
+						cardEntries += '<p><strong>' + entry + '</strong> : ' + entries[entry] + '</p>';
+					}
+				}
+
+				card.append(cardEntries);
+				btn.hide();
+			};
+		</script>
+	</body>
+</html>

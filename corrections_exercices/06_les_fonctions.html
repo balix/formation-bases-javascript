@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les fonctions</title>
+	</head>
+	<body>
+		<h1>Les fonctions</h1>
+
+		<script type="text/javascript">
+			// 1. Déclarez et appelez une fonction classique classicFn() qui contiendra une instruction affichant "I'm classic !"
+
+			function classicFn(){
+				console.log("I'm classic !");
+			}
+
+			classicFn();
+
+			// 2. Déclarez et appelez une fonction anonyme anonymousFn() qui contiendra une instruction affichant "I'm anonymous !"
+
+			var anonymousFn = function(){
+				console.log("I'm anonymous !");
+			}
+
+			anonymousFn();
+
+			// 3. Créez et appelez une fonction calculateSum prenant deux paramètres (number1 et number2) et capable de calculer la somme des deux nombres
+
+			function calculateSum(number1, number2){
+				var result = number1 + number2;
+			}
+
+			calculateSum(10, 5);
+
+			// 4. Créez une nouvelle variable newResult dans la portée globale, assignez lui la variable result plus 10 et affichez sa valeur
+			
+			/*
+			var newResult = result + 10;
+			console.log(newResult);
+			*/
+
+			// 5. Déplacez ensuite la déclaration de votre variable dans la portée locale de la fonction calculateSum et affichez sa valeur
+
+			/* 
+			function calculateSum(number1, number2){
+				var result = number1 + number2;
+				var newResult = result + 10;
+				console.log(newResult);
+			} 
+			*/
+
+			// 6. Créez une fonction calculateSumReturn prenant deux paramètres (number1 et number2) et capable de retourner la valeur du calcul de la somme des deux nombres
+
+			function calculateSumReturn(number1, number2){
+				return number1 + number2;
+			}
+
+			// 7. Stockez et affichez le résultat de la fonction calculateSumReturn dans une variable sumResult
+			
+			var sumResult = calculateSumReturn(10, 5);
+			console.log("Résultat de la somme :", sumResult);
+
+			// 8. Protégez votre fonction calculateSumReturn à l'aide d'une fonction anonyme auto-invoquée
+			
+			// 9. Déplacez l'appel de calculateSumReturn à l'intérieur de votre code protégé et appelez la à nouveau
+
+			/*
+			(function() {
+				function calculateSumReturn(number1, number2){
+					return number1 + number2;
+				}
+
+				calculateSumReturn(10, 5);
+			})();
+			*/
+		</script>
+	</body>
+</html>

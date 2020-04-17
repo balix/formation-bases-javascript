@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Les opérateurs et conditions</title>
+	</head>
+	<body>
+		<h1>Les opérateurs et conditions</h1>
+
+		<script type="text/javascript">
+			// 1. Créez une fonction testNum prenant un paramètre number qui retournera "positif" si number est supérieur à 0
+
+			function testNum(number) {
+				if (number > 0) {
+					return "positif";
+				}
+			}
+
+			// 2. Appelez votre fonction en lui passant un chiffre positif
+			console.log(testNum(5));
+
+			// 3. Ajoutez une instruction ELSE à la fonction testNum qui retourne "Négatif" si le number n'est pas supérieur à 10
+
+			function testNum2(number) {
+				if (number > 0) {
+					return "positif";
+				} else {
+					return "négatif";
+				}
+			}
+
+			// 4. Appelez votre fonction en lui passant le chiffre 0
+			console.log(testNum2(0));
+
+			// 5. Remplacez l'instruction ELSE par une condition ELSE IF
+
+			function testNum3(number) {
+				if (number > 0) {
+					return "positif";
+				} else if (number < 0) {
+					return "négatif";
+				}
+			}
+
+			// 6. Appelez votre fonction en lui passant un chiffre négatif
+			console.log(testNum3(-10));
+
+			// 7. Demandez son âge à l'utilisateur et stockez le résultat dans une variable userAge
+
+			var userAge = prompt("Quel est votre âge ?");
+
+			// 8. Créez une fonction status prenant un userAge en paramètre et qui retournera "enfant" si l'âge est inférieur à 13, "adolescant" si l'âge est supérieur ou égale à 13 et inférieur ou égale à 18 "adulte" si l'âge est supérieur à 18
+
+			function status(userAge){
+				if (userAge < 13){
+					return "Enfant";
+				} else if (userAge >= 13 && userAge <= 18){
+					return "Adolescent";
+				} else {
+					return "Adulte";
+				}
+			}
+
+			console.log("Votre âge est de " + userAge + " ans et vous êtes un " + status(userAge));
+
+			// 9. Créez une variable hour et affectez lui une valeur comprise entre 0 et 24
+			var date = new Date();
+			var hour = date.getHours();
+
+			// 10. Créez une variable hello et affectez lui un opérateur ternaire qui renvoie "Bonjour" si l'heure est inférieure ou égale à 18 et "Bonsoir" si l'heure est supérieure à 18
+			var hello = (hour <= 18) ? "Bonjour" : "Bonsoir";
+
+			// 11. Affichez le résultat
+			console.log(hello);
+		</script>
+	</body>
+</html>
